@@ -3,8 +3,8 @@ INCLUDE_DIRECTORIES(
 	${CMAKE_CURRENT_SOURCE_DIR}/..
 	${CMAKE_CURRENT_SOURCE_DIR}/../include
 	${CMAKE_CURRENT_BINARY_DIR}/../include
-	${NEON_INCLUDE_DIR}
-	${LIBXML2_INCLUDE_DIR}
+	${NEON_INCLUDE_DIRS}
+	${LIBXML2_INCLUDE_DIRS}
 )
 
 SET(_sources_cc Alias.cc Annotation.cc Artist.cc ArtistCredit.cc Attribute.cc CDStub.cc Collection.cc
@@ -42,8 +42,8 @@ ADD_CUSTOM_COMMAND(
 
 ADD_CUSTOM_TARGET(src_gen DEPENDS mb5_c.h)
 
-ADD_LIBRARY(musicbrainz5cc SHARED ${_sources_cc})
-ADD_LIBRARY(musicbrainz5 SHARED ${_sources_c})
+ADD_LIBRARY(musicbrainz5cc ${_sources_cc})
+ADD_LIBRARY(musicbrainz5 ${_sources_c})
 
 SET_TARGET_PROPERTIES(musicbrainz5cc PROPERTIES
     VERSION ${musicbrainz5_VERSION}

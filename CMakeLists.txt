@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 
 PROJECT(libmusicbrainz5)
 SET(PROJECT_VERSION 5.1.0)
+OPTION(BUILD_SHARED_LIBS "Build shared library" ON)
 
 # 1. If the library source code has changed at all since the last update, then increment revision.
 # 2. If any interfaces have been added, removed, or changed since the last update, increment current, and set revision to 0.
