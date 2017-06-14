@@ -9,5 +9,6 @@ URL: http://musicbrainz.org/doc/libmusicbrainz
 Version: ${PROJECT_VERSION}
 Requires.private: neon >= 0.25 libxml-2.0
 Libs: -L${LIB_INSTALL_DIR} -lmusicbrainz5cc
+Libs.private: -lstdc++
 Cflags: -I${INCLUDE_INSTALL_DIR}
 
